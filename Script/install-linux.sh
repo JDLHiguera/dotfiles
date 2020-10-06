@@ -15,6 +15,7 @@ rm hyper.deb
 
 
 # Instalar OhMyZsh
+sudo apt-get install git -y
 sudo sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
