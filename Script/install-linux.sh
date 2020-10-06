@@ -4,6 +4,7 @@
 # Actualizar repos y sistema
 sudo apt-get update -y
 sudo apt-get upgrade -y
+sudo apt-get install git -y
 
 
 # Instalar HyperTerminal
@@ -12,12 +13,6 @@ wget https://releases.hyper.is/download/deb
 sudo mv deb hyper.deb
 sudo apt install -y ./hyper.deb
 rm hyper.deb
-
-
-# Instalar OhMyZsh
-sudo apt-get install git -y
-sudo sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 
 # Instalar Starship
 curl -fsSL https://starship.rs/install.sh | bash
@@ -28,7 +23,6 @@ echo -n '\n' >> zshrc
 echo -n "alias ls='lsd'" >> zshrc
 sudo rm .zshrc
 mv zshrc .zshrc
-source .zshrc
 
 
 # Instalar fuente de Terminal
@@ -53,7 +47,12 @@ sudo mv .hyper.js.1 .hyper.js
 
 sudo wget https://github.com/Peltoche/lsd/releases/download/0.18.0/lsd_0.18.0_amd64.deb
 sudo dpkg -i lsd_0.18.0_amd64.deb
-rm lsd_0.18.0_amd64.deb
+sudo rm lsd_0.18.0_amd64.deb
+
+
+# Instalar OhMyZsh
+
+sudo sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #curl -s https://api.github.com/repos/jgm/pandoc/releases/latest \
 #| grep "browser_download_url.*deb" \
