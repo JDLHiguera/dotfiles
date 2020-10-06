@@ -183,7 +183,6 @@ module.exports = {
             'hyperlinks',
             'hyper-tab-icons',
             'hyper-quit',
-            'hyperline',
             'hyper-blink'],
 
   // in development, you can create a directory under
